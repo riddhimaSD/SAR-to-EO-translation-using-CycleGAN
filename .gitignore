@@ -1,0 +1,190 @@
+# ============================================================
+#  .gitignore — Python / Data Science / Computer Vision ML
+# ============================================================
+
+# ─── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+*.so
+*.dylib
+
+# ─── Virtual Environments ────────────────────────────────────
+venv/
+env/
+.env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+conda-env/
+.conda/
+
+# ─── Jupyter Notebooks ───────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints
+profile_default/
+ipython_config.py
+# Uncomment below to ignore notebook outputs (recommended for clean diffs)
+# *.ipynb
+
+# ─── Data Files (DO NOT commit raw/large datasets) ───────────
+data/raw/
+data/processed/
+data/augmented/
+data/external/
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.npy
+*.npz
+
+# ─── Images (datasets) ───────────────────────────────────────
+# Ignore bulk image folders but keep structure files
+data/**/*.jpg
+data/**/*.jpeg
+data/**/*.png
+data/**/*.gif
+data/**/*.bmp
+data/**/*.tiff
+data/**/*.webp
+# Allow sample images if you add them manually:
+# !data/samples/*.jpg
+
+# ─── Trained Models (large binary files) ─────────────────────
+models/saved_models/
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.pb
+*.keras
+# Keep model card
+!models/model_card.md
+
+# ─── Outputs ─────────────────────────────────────────────────
+outputs/plots/
+outputs/reports/
+# Optionally keep a sample output:
+# !outputs/plots/sample_confusion_matrix.png
+
+# ─── MLflow / WandB / Experiment Tracking ────────────────────
+mlruns/
+mlartifacts/
+wandb/
+.neptune/
+lightning_logs/
+
+# ─── Environment & Secrets ───────────────────────────────────
+.env
+.env.*
+*.env
+secrets.yaml
+secrets.json
+credentials.json
+api_keys.txt
+.secrets/
+
+# ─── IDEs & Editors ──────────────────────────────────────────
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Jupyter / IPython
+.ipython/
+
+# Spyder
+.spyderproject.cfg
+.spyproject
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+.#*
+
+# ─── OS Files ────────────────────────────────────────────────
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ─── Logs & Temp Files ───────────────────────────────────────
+*.log
+*.tmp
+*.temp
+logs/
+log/
+tmp/
+temp/
+.cache/
+__temp__/
+
+# ─── Testing ─────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+coverage.xml
+*.cover
+
+# ─── Documentation Build ─────────────────────────────────────
+docs/_build/
+site/
+
+# ─── DVC (Data Version Control) ──────────────────────────────
+# Comment out if not using DVC
+# .dvc/tmp
+# .dvc/cache
+
+# ─── Docker ──────────────────────────────────────────────────
+.dockerignore
+
+# ─── Node (if using any JS tools) ────────────────────────────
+node_modules/
+npm-debug.log*
+
+# ============================================================
+# KEEP THESE (force-include important empty folder markers)
+# ============================================================
+!data/.gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/augmented/.gitkeep
+!models/saved_models/.gitkeep
+!outputs/plots/.gitkeep
+!outputs/reports/.gitkeep
